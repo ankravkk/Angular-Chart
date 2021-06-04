@@ -1,0 +1,29 @@
+ <!-- <div style="margin-left:250px ;height: 50%; width: 50%; background-color: black; margin-top: 100px;">
+<div class="chart-wrapper">
+    <canvas baseChart 
+    [datasets]="barChartData"
+    [labels]="barChartLabels"
+    [options]="barChartOptions"
+    [plugins]="barChartPlugins"
+    [legend]="barChartLegend"
+    [chartType]="barChartType">
+  </canvas>
+</div>
+</div>  -->
+<div class="list row">
+  <div class="col-md-6">
+    <h4>Tutorials List</h4>
+    <ul class="list-group">
+      <li
+      class="list-group-item"
+      *ngFor="let tutorials of employee; let i = index"
+      [class.active]="i == currentIndex"
+      (click)="setActiveTutorial(tutorials, i)"
+      >
+        {{tutorials.param}}
+      </li>
+    </ul>
+
+  </div>
+
+ 
